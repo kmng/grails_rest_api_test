@@ -1,9 +1,9 @@
 
 
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'todo.User'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'todo.UserRole'
-grails.plugin.springsecurity.authority.className = 'todo.Role'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'todo1.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'todo1.UserRole'
+grails.plugin.springsecurity.authority.className = 'todo1.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
@@ -14,7 +14,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/js/**',       access: ['permitAll']],
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
-	[pattern: '/**/favicon.ico', access: ['permitAll']]
+	[pattern: '/**/favicon.ico', access: ['permitAll']],
+	[pattern: '/api/**', access: ['permitAll']],
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [
@@ -23,6 +24,6 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/**/css/**',      filters: 'none'],
 	[pattern: '/**/images/**',   filters: 'none'],
 	[pattern: '/**/favicon.ico', filters: 'none'],
-	[pattern: '/**',             filters: 'JOINED_FILTERS']
+	[pattern: '/api/**',             filters: 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter']
 ]
 

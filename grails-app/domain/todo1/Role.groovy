@@ -1,4 +1,4 @@
-package todo
+package todo1
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString

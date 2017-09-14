@@ -1,5 +1,4 @@
-package todo
-
+package todo1
 import grails.gorm.DetachedCriteria
 import groovy.transform.ToString
 
