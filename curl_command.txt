@@ -1,0 +1,3 @@
+curl -i  -H "Content-Type: application/json" -X POST -d '{"username":"user1","password":"pwd1"}' http://localhost:8080/api/login
+
+curl -i -H "X-Auth-Token: nr2fp0qvs6ohhu5duhkkc8890g22c3ni"  http://localhost:8080/api/todos
